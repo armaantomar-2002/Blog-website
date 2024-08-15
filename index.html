@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Curated Chronicles</h1>
+        <button class="home-button" onclick="goHome()">Home</button><br>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" id="search-bar" placeholder="Search" aria-label="Search" oninput="searchPosts()">
+          
+        </form>
+        
+    </header>
+
+    <main>
+        <aside>
+            <h3>Categories</h3>
+            <div class="category-buttons">
+              <button onclick="filterPosts('category1')">Bussiness</button>
+              <button onclick="filterPosts('category2')">Wealth/Money</button>
+              <button onclick="filterPosts('category3')">Startup</button>
+              <button onclick="filterPosts('category4')">Games/Sports</button>
+              <button onclick="filterPosts('category5')">Agriculture</button>
+              <button onclick="filterPosts('category6')">Learning</button>
+              <button onclick="filterPosts('category7')">Work Environment</button>
+              
+          </div>
+        </aside>
+
+        <section id="post1" class="blog-post" data-category="category1">
+            <h2>Why culture is the mediator for all things business</h2>
+            <p class="date">Published on: August 10, 2024</p>
+            <img src="./images/blog1.jpeg" alt="Post 1 Image">
+            <p>A paradigm shift occurs when our understanding of a phenomenon changes radically, often by altering some fundamental assumption. This shift can lead to significant advancements in the field, as seen when Copernicus proposed that the Earth revolves around the sun.
+
+              A similar shift is unfolding in business, though it is often poorly accepted. (It took centuries to accept Copernicus's heliocentric model fully.) Today, leadership conversations in a typical business focus on strategy, execution, customers, or personnel. While these aspects are important, the conversations miss key questions: What should the CEO focus on to have the greatest impact? What is the causal chain? Where does it all begin?
+              
+              The New Model
+              In this article, I present a holistic business model in which culture plays a central role in driving growth and success. This model transcends the superficial discussions on culture often heard in leadership meetings and goes beyond token gestures like employee satisfaction surveys and recognitions. Instead, they should embrace culture as the very core of their business, not a peripheral concern relegated to HR.
+              
+              A great culture doesn't necessarily mean keeping employees comfortable and happy. Not all successful cultures include comfortable employees, but they do include proud participants. A truly successful culture unites the firm's goals, resources, and strategies into a comprehensive and formidable system. As such, culture is a unified set of beliefs and behaviours that harmoniously drive toward business objectives.
+              
+              Great teams use whatever tool they have in their arsenal to create outstanding outcomes.</p>
+            <div class="social-share">
+                <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+                <a href="https://x.com/home?lang=en">Share on Twitter</a>
+                <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+            </div>
+            <div class="comments">
+                <h3>Comments</h3>
+                <div class="comment-list" id="comment-list-1"></div>
+                <form class="comment-form" onsubmit="addComment(1); return false;">
+                    <input type="text" id="name-1" placeholder="Your name" required>
+                    <textarea id="message-1" placeholder="Your comment" required></textarea>
+                    <button type="submit">Add Comment</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="post2" class="blog-post" data-category="category2">
+            <h2>Nonprofits build organisational strength by getting to know their funders</h2>
+            <p class="date">Published on: August 11, 2024</p>
+            <img src="./images/blog2.jpeg" alt="Post 2 Image">
+            <p>In January 2023, when the global economy was beginning to shake off the grip of the COVID-19 virus and the attendant lockdowns, the education nonprofit Saajha doubled its budget to Rs5.3 crore ($662,500) for the financial year 2022-23. It was an incredibly stunning recovery for an organisation that ran activities on the ground and whose work nearly stopped when the pandemic hit.
+
+              Saajha's performance stands out in the landscape of the nonprofit sector in India. In 2021, a Bridgespan Group survey found that more than half of the 388 non-governmental organisations (or nonprofits) it surveyed held less than three months' expenses in reserve, a marker of serious financial stress. Organisations were hard-pressed to accomplish their work without financial reserves, including covering administrative expenses such as office overhead, salaries, and technology. These are called indirect expenses because they are not directly related to the programmes.
+              
+              Set up in 2014, Saajha supports children up to 11 years old enrolled in government schools to learn reading and maths better. Its strategy is in-person training for parents to help their children with schoolwork. Naturally, Saajha's activities came to a standstill during the pandemic lockdowns in 2020 and 2021. But Saajha saw an opportunity to change its operations: shift to a technology-based model, use phone calls and WhatsApp to interact with parents and reduce in-person interactions.
+              
+              The question was: Could it find funding for that innovation? Technology expenses are conventionally listed as indirect or organisational development expenses because they do not go directly to beneficiaries. But Saajha pitched a donor it knew by redefining technology development as a separate programme rather than as part of its administration costs. That approach proved attractive, and the funding came through. The move proved strategic.
+              
+              "This year, we are hoping to manage 20,000 active relationships enabling improvement for about 8,000 children," said Prashast Srivastava, co-founder of Saajha. "Over the next two years, we have planned a significant scale-up. Our goal is to enable improvement in learning levels of 200,000 children by March 2026."</p>
+            <div class="social-share">
+                <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+                <a href="https://x.com/home?lang=en">Share on Twitter</a>
+                <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+            </div>
+            <div class="comments">
+                <h3>Comments</h3>
+                <div class="comment-list" id="comment-list-2"></div>
+                <form class="comment-form" onsubmit="addComment(2); return false;">
+                    <input type="text" id="name-2" placeholder="Your name" required>
+                    <textarea id="message-2" placeholder="Your comment" required></textarea>
+                    <button type="submit">Add Comment</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="post3" class="blog-post" data-category="category3">
+            <h2>Beyond metro hubs: India's new startup frontiers
+            </h2>
+            <p class="date">Published on: August 12, 2024</p>
+            <img src="./images/blog3.jpeg" alt="Post 3 Image">
+            <p>The recent elimination of the Angel Tax in the Union Budget 2024 is hailed as a further bolster to India’s startup ecosystem by attracting greater domestic and foreign fund infusions. Despite the slowdown in global funding from 2021 to 2023, Indian startups achieved a 71.5 percent growth. Outpacing China in 2021, India is now second only to the US as a unicorn hub. Shifting regional and sectoral dynamics are fuelling India’s startup momentum.
+
+              Lower-tier cities and less competitive states emerging as prime startup hubs
+              The era when startups were confined to Tier 1 cities like Bengaluru, Mumbai, and Delhi is long gone. Over the past five years, the startup growth rate in Tier 1 cities has plunged by 25 percent, while Tier 2 cities have experienced a 15 percent upsurge. A recent study by the Asia Competitiveness Institute highlights a redistribution pattern in startup growth across the country, with many of these lower-tier destinations belonging to middle and bottom-ranked competitive states such as Bihar, Haryana, Manipur, and Assam.
+              
+              Policy frameworks have been a major push factor. Startup India has created online portals for investors to connect with founders in these cities. In a survey of about 30 Tier 2 and 3 cities conducted in 2024, 67 percent of investors used government-facilitated platforms to interact with local startups.</p>
+            <div class="social-share">
+                <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+                <a href="https://x.com/home?lang=en">Share on Twitter</a>
+                <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+            </div>
+            <div class="comments">
+                <h3>Comments</h3>
+                <div class="comment-list" id="comment-list-3"></div>
+                <form class="comment-form" onsubmit="addComment(3); return false;">
+                    <input type="text" id="name-3" placeholder="Your name" required>
+                    <textarea id="message-3" placeholder="Your comment" required></textarea>
+                    <button type="submit">Add Comment</button>
+                </form>
+            </div>
+        </section>
+
+
+        <section id="post4" class="blog-post" data-category="category2">
+          <h2>Are you a salaried individual? Here’s how the Budget should influence your future investments</h2>
+          <p class="date">Published on: August 13, 2024</p>
+          <img src="./images/blog4.webp" alt="Post 4 Image">
+          <p>The recent Union Budget has introduced several changes impacting various financial aspects for salaried individuals and investors. Let me highlight two important pillars: capital gains tax adjustments and changes in real estate investments.
+            The Union budget 2024-25 made two key changes concerning the capital gains tax: Indexation benefits on property sales are being removed, and taxes on stock and equity fund profits will rise. On the plus side, the exemption limit for equity gains has been increased, and a previous issue with non-equity fund taxation has been addressed. 
+          </p>
+          <div class="social-share">
+              <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+              <a href="https://x.com/home?lang=en">Share on Twitter</a>
+              <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+          </div>
+          <div class="comments">
+              <h3>Comments</h3>
+              <div class="comment-list" id="comment-list-4"></div>
+              <form class="comment-form" onsubmit="addComment(4); return false;">
+                  <input type="text" id="name-4" placeholder="Your name" required>
+                  <textarea id="message-4" placeholder="Your comment" required></textarea>
+                  <button type="submit">Add Comment</button>
+              </form>
+          </div>
+      </section>
+
+
+      <section id="post5" class="blog-post" data-category="category1">
+        <h2>Is Middle India's lack of knowledge of the VC ecosystem a blessing?</h2>
+        <p class="date">Published on: August 13, 2024</p>
+        <img src="./images/blog5.avif" alt="Post 5 Image">
+        <p>In their research on small businesses, JPMorgan Chase found that in 2014, over 99 percent of America's nearly 30 million firms were small businesses. The vast majority of these employ fewer than 20 people, and nearly 40 percent of all enterprises have under $100,000 in revenue. India is not very different. On 23 March 2020, the Financial Express reported that "according to the MSME ministry's FY19 annual report, the MSME sector is dominated by micro-enterprises. Of the 6.33 crore MSMEs, a staggering 6.3 crores (99.4 percent) are micro-enterprises". The 'middle' is completely missing in India. A vast majority of them do not even have a website.
+
+          One would assume that companies, in terms of size, would follow the standard normal distribution curve, with most falling in the middle and a small number of extremes bringing up both sides of the mean. The reality is very counter-intuitive, and normal distribution is not as universal as we think. There is almost no 'middle'. Most of the MSME companies are small, and the big ones are an insignificant minority.</p>
+        <div class="social-share">
+            <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+            <a href="https://x.com/home?lang=en">Share on Twitter</a>
+            <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+        </div>
+        <div class="comments">
+            <h3>Comments</h3>
+            <div class="comment-list" id="comment-list-4"></div>
+            <form class="comment-form" onsubmit="addComment(5); return false;">
+                <input type="text" id="name-5" placeholder="Your name" required>
+                <textarea id="message-5" placeholder="Your comment" required></textarea>
+                <button type="submit">Add Comment</button>
+            </form>
+        </div>
+      </section>
+
+
+      <section id="post6" class="blog-post" data-category="category4">
+      <h2>The Indian Athlete Has Arrived: Overview of India's sports journey ahead of Paris 2024</h2>
+      <p class="date">Published on: August 13, 2024</p>
+      <img src="./images/blog6.jpg" alt="Post 6 Image">
+      <p>As the world anticipates the start of the world's largest and most competitive sporting event in Paris this week, this memoir is a debut attempt to share some macro trends across performance, the business of sport, and the larger direction of Indian sports experienced as a former professional athlete, coach (albeit for a brief period), and sports management professional from the other side of the spectrum.
+
+        The last time the Olympics were held in the French capital, exactly 100 years ago, India sent seven athletes, who returned with zero medals. Fast-forward a century, and 117 of India's finest athletes will compete across 17 disciplines in August at the Paris Olympic Games 2024.
+        
+        While progress is not to be measured only based on the number of Olympic Games qualifiers, it is worth highlighting that qualifying for the showpiece event is no mean feat for any professional Indian athlete. To put it into context, only 10,500 of the most elite athletes across 206 countries make the cut to push the boundaries of human excellence (mind and body) across 32 disciplines.</p>
+      <div class="social-share">
+          <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+          <a href="https://x.com/home?lang=en">Share on Twitter</a>
+          <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+      </div>
+      <div class="comments">
+          <h3>Comments</h3>
+          <div class="comment-list" id="comment-list-6"></div>
+          <form class="comment-form" onsubmit="addComment(6); return false;">
+              <input type="text" id="name-6" placeholder="Your name" required>
+              <textarea id="message-6" placeholder="Your comment" required></textarea>
+              <button type="submit">Add Comment</button>
+          </form>
+      </div>
+      </section>
+
+
+    <section id="post7" class="blog-post" data-category="category5">
+    <h2>Rajasthan's Rabriyawas once a dustbowl, is now a thriving agricultural hub</h2>
+    <p class="date">Published on: August 13, 2024</p>
+    <img src="./images/blog7.avif" alt="Post 7 Image">
+    <p>As the global population continues to grow, and consumption patterns demand more from the finite natural resources that surround and support us, consider this—according to the United Nations Convention to Combat Desertification (UNCCD), between 2015 and 2019, the world lost 100 million hectares of healthy and productive land, each year. India alone lost 30.51 million hectares in that time.
+
+      It is a mindboggling fact but what does this really mean? Fundamentally, the productive capacity of that land and its productive potential for the future is temporarily or definitively lost. It cannot provide food and fibre for us anymore. It cannot provide for animals and insects either. Its value as an economic and natural resource is severely inhibited.
+      
+      This presents a chronic problem for countries like India, with the population and poverty problem building at its seams, and a high dependence on agriculture for survival. Natural processes play a role in the degradation of land, but human beings cause the most damage. Unsustainable agricultural practices are at the forefront of driving the depletion and contamination of water resources nutrient loss from the soil, and the loss of biodiversity.
+      
+      Ironically, India’s poor are both the victims and the perpetrators of the problem. Marginal farmers simply try to make a living out of the tiny, family-held land they own, to survive. They use more water, more chemicals, more fertiliser, and tend to sow the same crops year after year, simply to get by.</p>
+    <div class="social-share">
+        <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+        <a href="https://x.com/home?lang=en">Share on Twitter</a>
+        <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+    </div>
+    <div class="comments">
+        <h3>Comments</h3>
+        <div class="comment-list" id="comment-list-7"></div>
+        <form class="comment-form" onsubmit="addComment(7); return false;">
+            <input type="text" id="name-7" placeholder="Your name" required>
+            <textarea id="message-7" placeholder="Your comment" required></textarea>
+            <button type="submit">Add Comment</button>
+        </form>
+    </div>
+    </section>
+
+
+    <section id="post8" class="blog-post" data-category="category6">
+      <h2>How young mothers have become the force of change in the learning and growth of our children</h2>
+      <p class="date">Published on: August 13, 2024</p>
+      <img src="./images/blog8.avif" alt="Post 8 Image">
+      <p>In July 2020, India's new National Education Policy was launched, and two important elements stand out in the education of young children. First, the age range 3 to 8 is recognised as the "foundation stage". Pre-school years are now seen as part of the continuum that leads into the first two grades of the formal school system. Second, the policy lays out clear goals—every student will attain foundational literacy and numeracy by Grade 3. The document goes on to underline that this is "an urgent national mission" with clear timelines and further states unequivocally that "the rest of this policy will become relevant for our students only if this most basic learning requirement (i.e., reading, writing, and arithmetic at the foundational level) is first achieved. These two elements provide an exciting opportunity to build India's education system, starting with fundamentals.
+
+        In addition to strengthening the classroom environment and practice in early grades, another force for fuelling and supporting children's learning is becoming increasingly visible. This is the effort of parents, particularly young mothers' engagement in their children's learning. The current cohort of mothers of young children (ages 3 to 8) differs from their counterparts even ten years ago. These women have benefited from the last two decades of progress in universalising elementary education.</p>
+      <div class="social-share">
+        <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+        <a href="https://x.com/home?lang=en">Share on Twitter</a>
+        <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+      </div>
+      <div class="comments">
+      <h3>Comments</h3>
+      <div class="comment-list" id="comment-list-8"></div>
+      <form class="comment-form" onsubmit="addComment(8); return false;">
+          <input type="text" id="name-8" placeholder="Your name" required>
+          <textarea id="message-8" placeholder="Your comment" required></textarea>
+          <button type="submit">Add Comment</button>
+      </form>
+      </div>
+    </section>
+
+
+    <section id="post9" class="blog-post" data-category="category7">
+      <h2>Mental Health in the Workplace: Why resilience and relevance matter</h2>
+      <p class="date">Published on: August 13, 2024</p>
+      <img src="./images/blog9.avif" alt="Post 9 Image">
+      <p>Once relegated to the shadows, mental health is now central to public discourse. Especially since the pandemic, more people are willing to talk about mental health within the workplace and beyond. Millennials and Gen Z, in particular, are unafraid to prioritise their mental wellbeing. Encouraged by their peers and celebrities opening up about mental health issues on social media, young people recognise that it’s no longer something to be ashamed of. Mental illness can happen to anyone, anytime; it’s no one’s fault, and it’s ok to seek help.
+
+        This shift in mindset couldn’t have come soon enough. Gen Z and Millennials are grappling with increasingly high levels of fear and uncertainty triggered by several crises we’ve witnessed in the last three years: COVID-19, wars in Ukraine and Gaza, the pressure to conform to unrealistic standards on social media, and more.</p>
+      <div class="social-share">
+          <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+          <a href="https://x.com/home?lang=en">Share on Twitter</a>
+          <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+      </div>
+      <div class="comments">
+      <h3>Comments</h3>
+      <div class="comment-list" id="comment-list-9"></div>
+      <form class="comment-form" onsubmit="addComment(9); return false;">
+          <input type="text" id="name-9" placeholder="Your name" required>
+          <textarea id="message-9" placeholder="Your comment" required></textarea>
+          <button type="submit">Add Comment</button>
+      </form>
+      </div>
+    </section>
+
+
+    <section id="post10" class="blog-post" data-category="category2">
+      <h2>Wealth Beyond Tier-1 Cities: Deciphering the fundamentals that make Bharat's billionaires tick</h2>
+      <p class="date">Published on: August 13, 2024</p>
+      <img src="./images/blog10.avif" alt="Post 10 Image">
+      <p>Legacy wealth: India's Tier-2 and Tier-3 cities have always had wealthy families. This wealth has been created by specialised sector focus and preserved for generations. In terms of investments, traditionally, legacy business owners are inclined towards real estate and gold. However, this wealth is now being diversified across more sophisticated financial instruments. Take the example of mutual funds, whose AUM share of smaller cities has grown from a mere 2.55 percent in 2014 to 17.44 percent in 2023, as per AMFI. Post–pandemic, this transition has been fueled by better access and growing financial awareness and further accelerated by the inter-generational wealth transfer, with the new generation showing more interest in exploring newer asset classes.
+
+        New wealth: Improved infrastructure, enhanced connectivity, and increased awareness have made India's smaller cities more business-friendly. Not far behind Maharashtra and Delhi, Uttar Pradesh, Rajasthan, and Tamil Nadu form the top three states from which India's unicorn startup founders hail.</p>
+      <div class="social-share">
+      <a href="https://www.facebook.com/?_rdr">Share on Facebook</a>
+      <a href="https://x.com/home?lang=en">Share on Twitter</a>
+      <a href="https://in.linkedin.com/">Share on LinkedIn</a>
+      </div>
+      <div class="comments">
+      <h3>Comments</h3>
+      <div class="comment-list" id="comment-list-10"></div>
+      <form class="comment-form" onsubmit="addComment(10); return false;">
+          <input type="text" id="name-10" placeholder="Your name" required>
+          <textarea id="message-10" placeholder="Your comment" required></textarea>
+          <button type="submit">Add Comment</button>
+      </form>
+      </div>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved by Armaan Tomar.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
